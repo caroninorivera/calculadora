@@ -5,46 +5,34 @@ var numero2 = prompt("Digite el segundo número: ");
 num1 = parseInt(numero1);
 num2 = parseInt(numero2);
 
+
+ function validarSiNumero(numero){
+    if (!/^([0-9])*$/.test(numero))
+      alert("El valor " + numero + " no es un número");
+  }
+
 switch(operacion)
 {
+
   case "suma" :
-    var suma = function(num1, num2){
-      var resultado = num1 + num2;
-      console.log("El resultado de la suma es: " + resultado);
-    };
-    suma(num1, num2);
-  break;
+  case "+":
   case "sum" :
-    var suma = function(num1, num2){
-      var resultado = num1 + num2;
-      console.log("El resultado de la suma es: " + resultado);
-    };
-    suma(num1, num2);
-  break;
   case "plus" :
     var suma = function(num1, num2){
       var resultado = num1 + num2;
+      alert("El resultado de la suma es: " + resultado);
       console.log("El resultado de la suma es: " + resultado);
     };
     suma(num1, num2);
   break;
   case "multiplicacion" :
-    var multiplicacion = function(num1, num2){
-      var resultado = num1 * num2;
-      console.log("El resultado de la multiplicacion es: " + resultado);
-    };
-    multiplicacion(num1, num2);
-  break;
   case "multiplication" :
+  case "*" :
+  case "times":
+
     var multiplicacion = function(num1, num2){
       var resultado = num1 * num2;
-      console.log("El resultado de la multiplicacion es: " + resultado);
-    };
-    multiplicacion(num1, num2);
-  break;
-  case "times" :
-    var multiplicacion = function(num1, num2){
-      var resultado = num1 * num2;
+        alert("El resultado de la multiplicacion es: " + resultado);
       console.log("El resultado de la multiplicacion es: " + resultado);
     };
     multiplicacion(num1, num2);
@@ -63,6 +51,34 @@ switch(operacion)
     };
     modulo(num1, num2);
   break;
+
+  case "mod" :
+    var modulo = function(num1, num2){
+      var resultado = num1 % num2;
+      console.log("El resultado del modulo es: " + resultado);
+    };
+    modulo(num1, num2);
+  break;
+
+  case "resta" :
+  case "-" :
+    var resta = function(num1, num2){
+      var resultado = num1 - num2;
+        alert("El resultado de la resta es: " + resultado);
+      console.log("El resultado de la resta es: " + resultado);
+    };
+    resta(num1, num2);
+  break;
+  case "division" :
+  case "/" :
+    var division = function(num1, num2){
+      var resultado = num1 / num2;
+        alert("El resultado de la division es: " + resultado);
+      console.log("El resultado de la division es: " + resultado);
+    };
+    division(num1, num2);
+  break;
+
   default:
   console.log("Operador no valido seleccione nuevamente, gracias");
 }
