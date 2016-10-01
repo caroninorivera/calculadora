@@ -64,5 +64,5 @@ switch(operacion)
     modulo(num1, num2);
   break;
   default:
-  console.log("Operador no valido");
+  console.log("Operador no valido seleccione nuevamente, gracias");
 }
